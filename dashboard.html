@@ -10,17 +10,35 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Transactions - Expense Tracker</title>
+    <title>Dashboard - Expense Tracker</title>
 
     <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet"
-        href="css/style.css"
     >
 
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     >
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 
@@ -36,6 +54,7 @@
 
                     <img
                         src="assets/logo.png"
+                        alt="Logo"
                         class="logo"
                     >
 
@@ -46,7 +65,10 @@
 
                 <nav class="sidebar-menu">
 
-                    <a href="dashboard.html">
+                    <a
+                        href="dashboard.html"
+                        class="active"
+                    >
 
                         <i class="fa-solid fa-house"></i>
 
@@ -55,10 +77,7 @@
                     </a>
 
 
-                    <a
-                        href="transactions.html"
-                        class="active"
-                    >
+                    <a href="transactions.html">
 
                         <i class="fa-solid fa-wallet"></i>
 
@@ -91,6 +110,8 @@
 
             <button class="logout-btn">
 
+                <i class="fa-solid fa-right-from-bracket"></i>
+
                 Logout
 
             </button>
@@ -102,37 +123,82 @@
 
             <header class="dashboard-header">
 
-                <h1>
+                <h1 id="welcome-message">
 
-                    Transactions 💳
+                    Welcome Back 👋
 
                 </h1>
 
                 <p>
 
-                    View and filter all transactions.
+                    Manage your income and expenses smartly.
 
                 </p>
 
             </header>
 
 
+            <section class="cards-container">
+
+                <div class="summary-card">
+
+                    <h3>Total Balance</h3>
+
+                    <p id="balance">₹0</p>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <h3>Income</h3>
+
+                    <p id="income">₹0</p>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <h3>Expenses</h3>
+
+                    <p id="expense">₹0</p>
+
+                </div>
+
+            </section>
+
+
             <section class="transaction-section">
 
-                <div class="search-filter-section">
+                <div class="transaction-header">
+
+                    <h2>Recent Transactions</h2>
+
+                </div>
+
+
+                <div class="transaction-form">
 
                     <input
                         type="text"
-                        id="search-transaction"
-                        placeholder="Search Transaction"
+                        id="title"
+                        placeholder="Transaction Title"
                     >
 
 
-                    <select id="filter-type">
+                    <input
+                        type="number"
+                        id="amount"
+                        placeholder="Amount"
+                    >
 
-                        <option value="all">
 
-                            All Types
+                    <select id="type">
+
+                        <option value="expense">
+
+                            Expense
 
                         </option>
 
@@ -142,59 +208,61 @@
 
                         </option>
 
-                        <option value="expense">
-
-                            Expense
-
-                        </option>
-
                     </select>
 
 
-                    <select id="filter-category">
-
-                        <option value="all">
-
-                            All Categories
-
-                        </option>
+                    <select id="category">
 
                         <option value="Food">
-
                             Food
-
                         </option>
 
                         <option value="Shopping">
-
                             Shopping
-
                         </option>
 
                         <option value="Travel">
-
                             Travel
-
                         </option>
 
                         <option value="Bills">
-
                             Bills
-
                         </option>
 
                         <option value="Salary">
-
                             Salary
-
                         </option>
 
                     </select>
+
+
+                    <button id="save-transaction">
+
+                        Save Transaction
+
+                    </button>
 
                 </div>
 
 
                 <div class="transaction-list">
+
+                </div>
+
+            </section>
+
+
+            <section class="analytics-section">
+
+                <h2>
+
+                    Expense Analytics
+
+                </h2>
+
+                <div class="chart-container">
+
+                    <canvas id="expenseChart"></canvas>
 
                 </div>
 
