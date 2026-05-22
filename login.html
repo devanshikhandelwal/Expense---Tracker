@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Expense Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main class="login-container">
+
+        <section class="left-side">
+
+            <h1>
+                Track Your <br>
+                <span>Expenses</span>
+            </h1>
+
+            <p>
+                Track your spending, manage your money,
+                and stay financially organized.
+            </p>
+
+        </section>
+
+        <section class="right-side">
+<button class="theme-toggle">
+    Toggle Theme
+</button>
+            <form class="login-form" id="login-form">
+
+                <h2>Login</h2>
+<p class="error-message"></p>
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email">
+
+                <label for="password">Password</label>
+                <div class="password-box">
+
+    <input 
+        type="password"
+        id="password"
+        placeholder="Enter your password"
+    >
+
+    <i class="fa-solid fa-eye" id="eye-icon"></i>
+
+</div>
+
+                <button type="submit">Login</button>
+
+                <p>
+                    Don't have an account?
+                    <a href="signup.html">Sign Up</a>
+                </p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+<script src="javascript/script.js"></script>
+
+</body>
+
+</html>

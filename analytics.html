@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Analytics - Expense Tracker</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <aside class="sidebar">
+
+            <div>
+
+                <div class="logo-section">
+
+                    <img
+                        src="assets/logo.png"
+                        class="logo"
+                    >
+
+                    <h2>Expense Tracker</h2>
+
+                </div>
+
+
+                <nav class="sidebar-menu">
+
+                    <a href="dashboard.html">
+
+                        <i class="fa-solid fa-house"></i>
+
+                        Dashboard
+
+                    </a>
+
+
+                    <a href="transactions.html">
+
+                        <i class="fa-solid fa-wallet"></i>
+
+                        Transactions
+
+                    </a>
+
+
+                    <a
+                        href="analytics.html"
+                        class="active"
+                    >
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                        Analytics
+
+                    </a>
+
+
+                    <a href="settings.html">
+
+                        <i class="fa-solid fa-gear"></i>
+
+                        Settings
+
+                    </a>
+
+                </nav>
+
+            </div>
+
+
+            <button class="logout-btn">
+
+                Logout
+
+            </button>
+
+        </aside>
+
+
+        <main class="main-content">
+
+            <header class="dashboard-header">
+
+                <h1>
+
+                    Analytics 📊
+
+                </h1>
+
+                <p>
+
+                    Track your financial insights.
+
+                </p>
+
+            </header>
+
+
+            <section class="cards-container">
+
+                <div class="summary-card">
+
+                    <h3>Highest Expense</h3>
+
+                    <p id="highest-expense">
+
+                        ₹0
+
+                    </p>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <h3>Total Transactions</h3>
+
+                    <p id="total-transactions">
+
+                        0
+
+                    </p>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <h3>Monthly Spending</h3>
+
+                    <p id="monthly-spending">
+
+                        ₹0
+
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <section class="analytics-section">
+
+                <h2>
+
+                    Expense Distribution
+
+                </h2>
+
+                <div class="chart-container">
+
+                    <canvas id="expenseChart"></canvas>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="javascript/script.js"></script>
+
+</body>
+
+</html>

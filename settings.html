@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Settings - Expense Tracker</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <aside class="sidebar">
+
+            <div>
+
+                <div class="logo-section">
+
+                    <img
+                        src="assets/logo.png"
+                        class="logo"
+                    >
+
+                    <h2>Expense Tracker</h2>
+
+                </div>
+
+
+                <nav class="sidebar-menu">
+
+                    <a href="dashboard.html">
+
+                        <i class="fa-solid fa-house"></i>
+
+                        Dashboard
+
+                    </a>
+
+
+                    <a href="transactions.html">
+
+                        <i class="fa-solid fa-wallet"></i>
+
+                        Transactions
+
+                    </a>
+
+
+                    <a href="analytics.html">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                        Analytics
+
+                    </a>
+
+
+                    <a
+                        href="settings.html"
+                        class="active"
+                    >
+
+                        <i class="fa-solid fa-gear"></i>
+
+                        Settings
+
+                    </a>
+
+                </nav>
+
+            </div>
+
+
+            <button class="logout-btn">
+
+                Logout
+
+            </button>
+
+        </aside>
+
+
+        <main class="main-content">
+
+            <header class="dashboard-header">
+
+                <h1>
+
+                    Settings ⚙️
+
+                </h1>
+
+                <p>
+
+                    Manage your profile and preferences.
+
+                </p>
+
+            </header>
+
+
+            <div class="settings-grid">
+
+                <div class="settings-card">
+
+                    <h3>
+
+                        Profile Settings
+
+                    </h3>
+
+
+                    <input
+                        type="text"
+                        id="change-name"
+                        placeholder="Change Name"
+                    >
+
+
+                    <input
+                        type="email"
+                        id="change-email"
+                        placeholder="Change Email"
+                    >
+
+
+                    <input
+                        type="password"
+                        id="change-password"
+                        placeholder="New Password"
+                    >
+
+
+                    <button id="save-settings">
+
+                        Save Changes
+
+                    </button>
+
+                </div>
+
+
+                <div class="settings-card">
+
+                    <h3>
+
+                        Appearance
+
+                    </h3>
+
+
+                    <button class="theme-toggle">
+
+                        Toggle Theme
+
+                    </button>
+
+                </div>
+
+
+                <div class="settings-card">
+
+                    <h3>
+
+                        Danger Zone
+
+                    </h3>
+
+
+                    <button
+                        id="reset-transactions"
+                        style="
+                        background:#ff4d6d;
+                        margin-top:15px;
+                        "
+                    >
+
+                        Reset All Transactions
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <script src="javascript/script.js"></script>
+
+</body>
+
+</html>
